@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
+
 Sitemap: http://brain-algorithms.github.io/web-brain/sitemap.xml

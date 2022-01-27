@@ -4,7 +4,7 @@
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/</loc>
-  <lastmod>2021-12-17T08:55:51+00:00</lastmod>
+  <lastmod>2022-01-27T11:35:54+00:00</lastmod>
   <priority>1.0</priority>
   <changefreq>daily</changefreq>
 </url>
@@ -112,6 +112,27 @@
   <lastmod>2021-12-15T11:25:59+00:00</lastmod>
   <priority>0.70</priority>
   <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/cz/myslenka-dne/index.html</loc>
+  <lastmod>2022-01-27T12:32:55+00:00</lastmod>
+  <priority>0.90</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/cz/myslenka-dne/about.html</loc>
+  <lastmod>2022-01-27T11:28:21+00:00</lastmod>
+  <priority>0.70</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/cz/myslenka-dne/article/2022-01-27.html</loc>
+  <lastmod>2022-01-27T05:29:17+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
 </url>
 
 <url>
@@ -557,7 +578,7 @@
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/indexcz.html</loc>
-  <lastmod>2021-12-15T11:24:05+00:00</lastmod>
+  <lastmod>2022-01-27T11:35:54+00:00</lastmod>
   <priority>1.00</priority>
   <changefreq>daily</changefreq>
 </url>

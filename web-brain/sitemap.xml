@@ -4,14 +4,14 @@
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/</loc>
-  <lastmod>2022-01-27T11:35:54+00:00</lastmod>
+  <lastmod>2022-02-14T01:20:00+00:00</lastmod>
   <priority>1.0</priority>
   <changefreq>daily</changefreq>
 </url>
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/index.html</loc>
-  <lastmod>2021-12-17T08:55:51+00:00</lastmod>
+  <lastmod>2022-02-14T01:20:00+00:00</lastmod>
   <priority>1.00</priority>
   <changefreq>daily</changefreq>
 </url>
@@ -199,6 +199,20 @@
 </url>
 
 <url>
+  <loc>http://brain-algorithms.github.io/web-brain/en/thought-of-the-day/index.html</loc>
+  <lastmod>2022-02-14T01:23:09+00:00</lastmod>
+  <priority>0.90</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/en/thought-of-the-day/about.html</loc>
+  <lastmod>2022-02-14T01:24:33+00:00</lastmod>
+  <priority>0.70</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
   <loc>http://brain-algorithms.github.io/web-brain/en/evolution/index.html</loc>
   <lastmod>2021-12-15T11:21:45+00:00</lastmod>
   <priority>0.90</priority>
@@ -284,7 +298,7 @@
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/en/brain/index.html</loc>
-  <lastmod>2022-01-25T10:14:14+00:00</lastmod>
+  <lastmod>2022-03-17T01:38:48+00:00</lastmod>
   <priority>0.90</priority>
   <changefreq>daily</changefreq>
 </url>
@@ -383,6 +397,13 @@
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/en/brain/article/2019-09-23-02.html</loc>
   <lastmod>2021-12-15T11:18:27+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/en/brain/article/2022-03-17.html</loc>
+  <lastmod>2022-03-17T03:17:45+00:00</lastmod>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>

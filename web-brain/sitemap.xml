@@ -312,7 +312,7 @@
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/en/brain/index.html</loc>
-  <lastmod>2022-03-17T01:38:48+00:00</lastmod>
+  <lastmod>2022-04-17T10:59:51+00:00</lastmod>
   <priority>0.90</priority>
   <changefreq>daily</changefreq>
 </url>
@@ -397,6 +397,13 @@
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/en/brain/article/2017-03-29.html</loc>
   <lastmod>2021-12-15T11:14:58+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/en/brain/article/2022-04-17.html</loc>
+  <lastmod>2022-04-17T01:59:49+00:00</lastmod>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>

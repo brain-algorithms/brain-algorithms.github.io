@@ -53,7 +53,7 @@
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/cz/mozek/index.html</loc>
-  <lastmod>2022-04-19T12:35:00+00:00</lastmod>
+  <lastmod>2022-06-19T09:04:19+00:00</lastmod>
   <priority>0.90</priority>
   <changefreq>daily</changefreq>
 </url>
@@ -63,6 +63,13 @@
   <lastmod>2021-12-15T11:26:18+00:00</lastmod>
   <priority>0.70</priority>
   <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/cz/mozek/article/2022-06-19.html</loc>
+  <lastmod>2022-06-19T11:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
 </url>
 
 <url>

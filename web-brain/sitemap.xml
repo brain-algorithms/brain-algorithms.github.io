@@ -130,7 +130,7 @@
 
 <url>
   <loc>http://brain-algorithms.github.io/web-brain/cz/myslenka-dne/index.html</loc>
-  <lastmod>2022-07-08T08:11:42+00:00</lastmod>
+  <lastmod>2022-09-27T07:52:18+00:00</lastmod>
   <priority>0.90</priority>
   <changefreq>daily</changefreq>
 </url>
@@ -140,6 +140,13 @@
   <lastmod>2022-01-27T11:28:21+00:00</lastmod>
   <priority>0.70</priority>
   <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>http://brain-algorithms.github.io/web-brain/cz/myslenka-dne/article/2022-09-27.html</loc>
+  <lastmod>2022-09-27T09:13:50+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
 </url>
 
 <url>

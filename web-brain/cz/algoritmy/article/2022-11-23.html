@@ -1,0 +1,183 @@
+<html lang="cz">
+
+<head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-83WDKF8RSJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-83WDKF8RSJ');
+</script>
+
+<title>Silná umělá inteligence - článek z webových stránek Dr. Zdeňka Moravčíka, vynálezce silné umělé inteligence</title>
+<meta name="description" content="As an inventor of strong artificial intelligence I am offering it to the world.">
+<meta name="keywords" content="strong artificial intelligence, artificial general intelligence, universal artificial intelligence, robotics, intelligent robots, intelligent machines, AI, AGI, brain algorithms, invention, inventor">
+<meta name="author" content="Dr. Zdenek Moravcik, inventor of strong AI">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="SHORTCUT ICON" href="../../../img/favicon.png">
+
+<style>
+
+link 
+{
+  color: inherit;
+  text-decoration: none;
+}
+
+a:link, a:visited 
+{
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover 
+{
+  color: #054F8D;
+  text-decoration: none;
+}
+
+</style>
+
+</head>
+
+<body bgcolor=#FFFFFF>
+
+
+<div style="position: relative; left: 100; top: 50; width: 800; color: black; font-family: sans-serif; font-weight: 400; font-size: 11pt;">
+
+<div style="font-family: helvetica; font-weight: 600; font-size: 7pt; text-transform: uppercase;">
+&nbsp;Rozklad složené vlny
+</div>
+
+<div style="font-weight: 100; font-size: 24pt; text-transform: uppercase; font-family: helvetica;">
+Diskrétní Fourierova transformace - příklady ve zdrojovém kódu
+</div>
+
+<div style="font-family: helvetica; font-weight: 100; font-size: 9pt; text-transform: uppercase;">
+&nbsp;23. listopadu 2022&nbsp;&nbsp;Dr. Zdeněk Moravčík
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<div style="line-height: 1.9;">
+
+<p>Video obsahuje dva příklady výpočtu diskrétní Fourierovy transformace prezentované formou zdrojového kódu.
+<p>Video si neklade za cíl vysvětlovat principy Fourierovy transformace, ale pouze tento algoritmus demonstrovat na příkladech ve zdrojovém kódu. Fourierova transformace, by se správně měla nazývat algoritmus rozkladu složené vlny na jednotlivé sinusoidy, nicméně zůstanu v tomto videu u tradičního názvu Fourierova transformace.
+
+<p>Samotné vysvětlení podstaty algoritmu Fourierovy transformace vyžaduje samostatné video.
+
+<p>První příklad zdrojového kódu používá k výpočtu komplexní čísla.
+<p>Druhý příklad je identický, ale výpočet je prováděn s použitím reálných čísel.
+
+<p>Výpočet se děje pro jednoduchost na vzorku 8 vstupních dat. Inicializace vstupní proměnné daty není součástí příkladu a je třeba si ji do zdrojového kódu doplnit.
+
+<p>Poznámka: uvedené příklady se nehodí pro výpočet tzv. zpětné Fourierovy transformace. Pro zpětnou Fourierovu transformaci je nutné zdrojový kód upravit.
+
+<p>00:00 – URL odkazy tohoto videa na webové stránky v QR-kódech
+<p>00:07 – Darujte kryptoměnu a podpořte moje videa
+<p>00:14 – Začátek videa
+<p>00:15 – První příklad ve zdrojovém kódu
+<p>00:16 – Druhý příklad ve zdrojovém kódu
+<p>01:04 – Mozkové algoritmy (trailer)
+<p>01:14 - Copyright & URL odkaz na webovou stránku autora v QR-kódu
+<p>01:18 – Autorova doporučená videa (dostupné pouze na platformě YouTube)
+
+<p>
+
+<p>Následují oba zdrojové kódy v textové podobě, aby je bylo možné snadno zkopírovat:
+<p>=====================================================
+
+<p>(*
+<p>	Příklad diskrétní Fourierovy transformace číslo 1	
+<p>	
+<p>	Popis: Výpočet diskrétní Fourierovy transformace (DFT) s použitím komplexních čísel	pro vstupní data o délce 8.
+<p>*)
+<p>
+<p>MODULE dft_priklad1;
+<p>
+<p>IMPORT	math;
+<p>	
+<p>VAR	data: ARRAY 8 OF REAL; (* Poznámka: inicializace této proměnné vstupními daty není součástí příkladu *)
+<p>	vysledek: ARRAY 8 OF COMPLEX; (* Zde budou po skončení výpočtu výstupní data *)
+<p>	c: COMPLEX;
+<p>	uhel: REAL;
+<p>	
+<p>FOR i := 0 TO 7 DO
+<p>	uhel := 2 * math.pi * i / 8; (* úhel v radiánech *)
+<p>	FOR j := 0 TO 7 DO
+<p>		RE(c) := math.cos(j*uhel); 
+<p>		IM(c) := math.sin(j*uhel);
+<p>		vysledek[i] := vysledek[i] + data[j] * c;
+<p>	END
+<p>END
+<p>
+<p>END dft_priklad1.
+<p>
+<p>=====================================================
+<p>
+<p>(*
+<p>	Příklad diskrétní Fourierovy transformace číslo 2	
+<p>	
+<p>	Popis: Výpočet diskrétní Fourierovy transformace (DFT) s použitím reálných čísel	pro vstupní data o délce 8.
+<p>*)
+<p>
+<p>MODULE dft_priklad2;
+<p>
+<p>IMPORT	math;
+<p>	
+<p>VAR	data: ARRAY 8 OF REAL; (* Poznámka: inicializace této proměnné vstupními daty není součástí příkladu *)
+<p>	re, im: ARRAY 8 OF REAL; (* Zde budou po skončení výpočtu výstupní data *)
+<p>	uhel: REAL; (* úhel v radiánech *)
+<p>	
+<p>FOR i := 0 TO 7 DO
+<p>	uhel := 2 * math.pi * i / 8; (* úhel v radiánech *)
+<p>	FOR j := 0 TO 7 DO
+<p>		re[i] := re[i] + data[j] * math.cos(j*uhel);
+<p>		im[i] := im[i] + data[j] * math.sin(j*uhel);
+<p>	END
+<p>END
+<p>
+<p>END dft_priklad2.
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<div>
+Shlédnout video přes IPFS&nbsp;(IPFS je obyčejně pomalý):
+<a href="https://ipfs.io/ipfs/QmQ2pJxvsMb97JwFio4bSRyDVgXSfjkv7rFckReP66VjrS"><b>QmQ2pJxvsMb97JwFio4bSRyDVgXSfjkv7rFckReP66VjrS</b><br>
+<img src="img/2022-11-23-a.jpg"></a>
+</div>
+
+<div>&nbsp;</div>
+
+<div>
+Shlédnout video přes YouTube:<br>
+<iframe width="474" height="267" src="https://www.youtube.com/embed/2b2ggdlOHEY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+
+<div style="font-weight: 100; font-size: 9pt; text-transform: uppercase;">
+Klíčová slova: matematika, algoritmus, DFT, Fourierova transformace, Joseph Fourier, složená vlna, rozklad složené vlny
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><a class=link href="../index.html" target=_new><b>&#60;&#60;&nbsp;ZPĚT</a></a></div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>
+</div>
+
+</body>
+
+</html>
+

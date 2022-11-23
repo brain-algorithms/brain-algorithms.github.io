@@ -64,25 +64,25 @@ Diskrétní Fourierova transformace - příklady ve zdrojovém kódu
 <div style="line-height: 1.9;">
 
 <p>Video obsahuje dva příklady výpočtu diskrétní Fourierovy transformace prezentované formou zdrojového kódu.
-<p>Video si neklade za cíl vysvětlovat principy Fourierovy transformace, ale pouze tento algoritmus demonstrovat na příkladech ve zdrojovém kódu. Fourierova transformace, by se správně měla nazývat algoritmus rozkladu složené vlny na jednotlivé sinusoidy, nicméně zůstanu v tomto videu u tradičního názvu Fourierova transformace.
+<br>Video si neklade za cíl vysvětlovat principy Fourierovy transformace, ale pouze tento algoritmus demonstrovat na příkladech ve zdrojovém kódu. Fourierova transformace, by se správně měla nazývat algoritmus rozkladu složené vlny na jednotlivé sinusoidy, nicméně zůstanu v tomto videu u tradičního názvu Fourierova transformace.
 
 <p>Samotné vysvětlení podstaty algoritmu Fourierovy transformace vyžaduje samostatné video.
 
 <p>První příklad zdrojového kódu používá k výpočtu komplexní čísla.
-<p>Druhý příklad je identický, ale výpočet je prováděn s použitím reálných čísel.
+<br>Druhý příklad je identický, ale výpočet je prováděn s použitím reálných čísel.
 
 <p>Výpočet se děje pro jednoduchost na vzorku 8 vstupních dat. Inicializace vstupní proměnné daty není součástí příkladu a je třeba si ji do zdrojového kódu doplnit.
 
 <p>Poznámka: uvedené příklady se nehodí pro výpočet tzv. zpětné Fourierovy transformace. Pro zpětnou Fourierovu transformaci je nutné zdrojový kód upravit.
 
 <p>00:00 – URL odkazy tohoto videa na webové stránky v QR-kódech
-<p>00:07 – Darujte kryptoměnu a podpořte moje videa
-<p>00:14 – Začátek videa
-<p>00:15 – První příklad ve zdrojovém kódu
-<p>00:16 – Druhý příklad ve zdrojovém kódu
-<p>01:04 – Mozkové algoritmy (trailer)
-<p>01:14 - Copyright & URL odkaz na webovou stránku autora v QR-kódu
-<p>01:18 – Autorova doporučená videa (dostupné pouze na platformě YouTube)
+<br>00:07 – Darujte kryptoměnu a podpořte moje videa
+<br>00:14 – Začátek videa
+<br>01:39 – První příklad ve zdrojovém kódu
+<br>04:06 – Druhý příklad ve zdrojovém kódu
+<br>05:36 – Mozkové algoritmy (trailer)
+<br>05:46 - Copyright & URL odkaz na webovou stránku autora v QR-kódu
+<br>05:50 – Autorova doporučená videa (dostupné pouze na platformě YouTube)
 
 <p>
 
@@ -90,56 +90,56 @@ Diskrétní Fourierova transformace - příklady ve zdrojovém kódu
 <p>=====================================================
 
 <p>(*
-<p>	Příklad diskrétní Fourierovy transformace číslo 1	
-<p>	
-<p>	Popis: Výpočet diskrétní Fourierovy transformace (DFT) s použitím komplexních čísel	pro vstupní data o délce 8.
-<p>*)
+<br>	Příklad diskrétní Fourierovy transformace číslo 1	
+<br>	
+<br>	Popis: Výpočet diskrétní Fourierovy transformace (DFT) s použitím komplexních čísel	pro vstupní data o délce 8.
+<br>*)
+<br>
+<br>MODULE dft_priklad1;
+<br>
+<br>IMPORT	math;
+<br>	
+<br>VAR	data: ARRAY 8 OF REAL; (* Poznámka: inicializace této proměnné vstupními daty není součástí příkladu *)
+<br>	vysledek: ARRAY 8 OF COMPLEX; (* Zde budou po skončení výpočtu výstupní data *)
+<br>	c: COMPLEX;
+<br>	uhel: REAL;
+<br>	
+<br>FOR i := 0 TO 7 DO
+<br>	uhel := 2 * math.pi * i / 8; (* úhel v radiánech *)
+<br>	FOR j := 0 TO 7 DO
+<br>		RE(c) := math.cos(j*uhel); 
+<br>		IM(c) := math.sin(j*uhel);
+<br>		vysledek[i] := vysledek[i] + data[j] * c;
+<br>	END
+<br>END
+<br>
+<br>END dft_priklad1.
 <p>
-<p>MODULE dft_priklad1;
+<br>=====================================================
 <p>
-<p>IMPORT	math;
-<p>	
-<p>VAR	data: ARRAY 8 OF REAL; (* Poznámka: inicializace této proměnné vstupními daty není součástí příkladu *)
-<p>	vysledek: ARRAY 8 OF COMPLEX; (* Zde budou po skončení výpočtu výstupní data *)
-<p>	c: COMPLEX;
-<p>	uhel: REAL;
-<p>	
-<p>FOR i := 0 TO 7 DO
-<p>	uhel := 2 * math.pi * i / 8; (* úhel v radiánech *)
-<p>	FOR j := 0 TO 7 DO
-<p>		RE(c) := math.cos(j*uhel); 
-<p>		IM(c) := math.sin(j*uhel);
-<p>		vysledek[i] := vysledek[i] + data[j] * c;
-<p>	END
-<p>END
-<p>
-<p>END dft_priklad1.
-<p>
-<p>=====================================================
-<p>
-<p>(*
-<p>	Příklad diskrétní Fourierovy transformace číslo 2	
-<p>	
-<p>	Popis: Výpočet diskrétní Fourierovy transformace (DFT) s použitím reálných čísel	pro vstupní data o délce 8.
-<p>*)
-<p>
-<p>MODULE dft_priklad2;
-<p>
-<p>IMPORT	math;
-<p>	
-<p>VAR	data: ARRAY 8 OF REAL; (* Poznámka: inicializace této proměnné vstupními daty není součástí příkladu *)
-<p>	re, im: ARRAY 8 OF REAL; (* Zde budou po skončení výpočtu výstupní data *)
-<p>	uhel: REAL; (* úhel v radiánech *)
-<p>	
-<p>FOR i := 0 TO 7 DO
-<p>	uhel := 2 * math.pi * i / 8; (* úhel v radiánech *)
-<p>	FOR j := 0 TO 7 DO
-<p>		re[i] := re[i] + data[j] * math.cos(j*uhel);
-<p>		im[i] := im[i] + data[j] * math.sin(j*uhel);
-<p>	END
-<p>END
-<p>
-<p>END dft_priklad2.
+<br>(*
+<br>	Příklad diskrétní Fourierovy transformace číslo 2	
+<br>	
+<br>	Popis: Výpočet diskrétní Fourierovy transformace (DFT) s použitím reálných čísel	pro vstupní data o délce 8.
+<br>*)
+<br>
+<br>MODULE dft_priklad2;
+<br>
+<br>IMPORT	math;
+<br>	
+<br>VAR	data: ARRAY 8 OF REAL; (* Poznámka: inicializace této proměnné vstupními daty není součástí příkladu *)
+<br>	re, im: ARRAY 8 OF REAL; (* Zde budou po skončení výpočtu výstupní data *)
+<br>	uhel: REAL; (* úhel v radiánech *)
+<br>	
+<br>FOR i := 0 TO 7 DO
+<br>	uhel := 2 * math.pi * i / 8; (* úhel v radiánech *)
+<br>	FOR j := 0 TO 7 DO
+<br>		re[i] := re[i] + data[j] * math.cos(j*uhel);
+<br>		im[i] := im[i] + data[j] * math.sin(j*uhel);
+<br>	END
+<br>END
+<br>
+<br>END dft_priklad2.
 
 
 <div>&nbsp;</div>

@@ -39,24 +39,29 @@ a.blue:hover {color:#fc1020; text-decoration:none;}
 <div align="left">
 
 <div style="color:#014A8D;font-family:verdana;font-size:10pt;position:absolute;top:70;left:150;width:1000;" align="left">
-  RPM & DEB packages containing A2 oberon operating system and compiler that is being developed by ETH Zurich.
+  Fedora RPM packages containing A2 oberon operating system and compiler that is being developed by ETH Zurich.
   <br>Packages are available for both 64-bit & 32-bit linuxes.
   <br>License type for A2 oberon distribution is BSD.
   <br>Packaging is being done by me (Dr. Zdenek Moravcik).
 </div>
 
-
 <div style="color:#014A8D;font-family:verdana;font-size:10pt;position:absolute;top:200;left:150;width:1000;" align="left">
+  Files are available via A2 rpm repository containing latest version of A2 binaries and sources.<br>
+  To install this repository on your computer run following command:<br>
+  <pre>wget -O /etc/yum.repos.d/a2.repo http://83.208.14.203/repo/a2.repo</pre>
+  
+  <em>a2-oberon-linux64-eth</em> &nbsp;is original ETH A2 distribution<br>
+  <em>a2-oberon-linux64-eth-patched</em> &nbsp;is A2 distribution containing some patches.<br>
+  
+  <br>After installing A2 repository install 64-bit A2 oberon by running:<br>
+  <pre>dnf install a2-oberon-linux64-eth a2-oberon-linux64-eth-patched</pre>
+  Optionally install 32-bit A2 oberon by running:<br>
+  <pre>dnf install a2-oberon-linux32-eth a2-oberon-linux32-eth-patched</pre>
+</div>
+
+<div style="color:#014A8D;font-family:verdana;font-size:10pt;position:absolute;top:600;left:150;width:1000;" align="left">
 
 <table valign=middle style="color:#014A8D;font-family:verdana;font-size:10pt;">
-
-<tr valign=middle><td valign=middle>Directory containing RPM packages (fedora)&nbsp;</td>
-<td valign=middle><a href="https://drive.google.com/drive/folders/1Sn8KNKeiSm3dCSc5W9eBpH5MzbEvTa5F" class="blue" target="_blank">&nbsp;<img src="img/rpm.png" width=50></a>
-</td></tr>
-
-<tr valign=middle><td valign=middle>Directory containing DEB packages&nbsp;</td>
-<td valign=middle><a href="https://drive.google.com/drive/folders/1yBjpqFYZcA4r0rg3UlX1TMRL-smbj26Y" class="blue" target="_blank">&nbsp;<img src="img/deb.png" width=50></a>
-</td></tr>
 
 <tr valign=middle><td valign=middle>Oberon language report (2019) as PDF&nbsp;</td>
 <td valign=middle><a href="pdf/OberonLanguageReport.pdf" class="blue" target="_blank">&nbsp;<img src="img/pdf1.png" width=50></a>
@@ -64,7 +69,7 @@ a.blue:hover {color:#fc1020; text-decoration:none;}
 
 </table>
 
-<a href="https://infsvn.anonymous:anonymous@svn.inf.ethz.ch/svn/lecturers/a2/trunk/" target="_blank"><img src="img/logo.svg"></a>
+<a href="https://gitlab.inf.ethz.ch/felixf/oberon" target="_blank"><img src="img/logo.svg"></a>
 
 </div>
 
